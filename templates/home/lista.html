@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Lista de libros</h1>
+        <!-- Recuperamos con un bucle la información del listado -->
+        <ul>
+            {% for l in libros %}
+                <li>{{l}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

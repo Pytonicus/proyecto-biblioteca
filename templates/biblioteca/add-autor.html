@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Agregar autor</title>
+    </head>
+    <body>
+        <h1>Agregar autor</h1>
+        <!-- Con este comando django nos mostrará el formulario automáticamente: --><!-- utilizamos un metodo post porque vamos a enviar, para traer se usa get -->
+        <form method="post">{% csrf_token %} <!-- Añadimos el comando para envio seguro via post -->
+            {{ form.as_p }}
+            <!-- Añadimos el botón -->
+            <button type="submit" name="button">Guardar</button>
+        </form>
+    </body>
+</html>

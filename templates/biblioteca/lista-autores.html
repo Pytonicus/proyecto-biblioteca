@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lista de autores</title>
+    </head>
+    <body>
+        <h1>Autores registrados</h1>
+        <table border="2">
+            <thead>
+                <th>Nombre</th>
+                <th>Nacionalidad</th>
+                <th>Acción</th>
+            </thead>
+            <tbody>
+            {% for a in autores %}
+                <tr>
+                    <td>{{a.nombre}}</td>
+                    <td>{{a.nacionalidad}}</td>
+                    <!-- Ponemos la url de django en la propiedad href: -->
+                    <td><a href="{% url 'biblioteca_app:lista-libros' a.id %}">VER</a></td><!-- usamos el app_name del archivo urls.py y la ruta, luego después de las comillas ponemos el id -->
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+            
+    </body>
+</html>

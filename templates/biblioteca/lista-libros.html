@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Lista de libros por autor</h1>
+        <!-- Creamos un bucle que mostrará todo el listado -->
+        <table border="2">
+            <thead>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+            </thead>
+            <tbody>
+            {% for l in libros %}
+                <tr>
+                    <td>{{l.id}}</td>
+                    <td>{{l.title}}</td>
+                    <td>{{l.autor}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
